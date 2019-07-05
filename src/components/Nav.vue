@@ -1,8 +1,9 @@
 <template>
   <div class="nav">
-    <a href></a>
-    {{navText}}
-    <a-icon class="nav-icon" type="github"></a-icon>
+    <a href="https://github.com/luvsunlight/css-layout-demo" target="_blank">
+      {{navText}}
+      <a-icon type="github"></a-icon>
+    </a>
   </div>
 </template>
 
@@ -15,15 +16,18 @@ export default {
 </script>
 
 <style lang='less' scoped>
-@color-primary: #1890ff;
-.nav {
-  padding: 10px;
-  //   border-bottom: 1px solid @color-primary;
-  color: @color-primary;
-  font-size: 20px;
-  text-align: center;
+@import "../common/style/index.less";
 
-  &-icon {
+.nav {
+  .text-center;
+  padding: @offset-small;
+  background: @color-primary;
+  opacity: 0.95;
+  color: @color-light;
+  font-size: @offset-base;
+  z-index: @z-index-max;
+  a {
+    color: @color-light;
   }
 }
 </style>
